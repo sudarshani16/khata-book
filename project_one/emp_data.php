@@ -1,9 +1,8 @@
 <div class="panel panel-primary">
                   <div class="panel-heading">
-                        <h3 class="panel-title">Emp data</h3>
+             <h3 class="panel-title">Emp data</h3>
                   </div>
-                  <div class="panel-body">
-                        
+                  <div class="panel-body">       
                         <table class="table table-bordered table-hover">
                             <thead>
                                 <tr>
