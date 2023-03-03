@@ -11,8 +11,7 @@
                     <th>Date</th>
                     <th>City</th>
                     <th>Paid Amt</th> 
-                    <th>Option</th>
-                                
+                    <th>Option</th>            
                 </tr>
             </thead>
             <tbody>
@@ -21,7 +20,6 @@
                     $res=mysqli_query($link,$sql);
                     while($r=mysqli_fetch_array($res)){           
                 ?>
-             
                 <tr>
                     <td><?php echo $r[0];?></td>
                     <td><?php echo $r[1];?></td>

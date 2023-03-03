@@ -18,8 +18,10 @@
 
     if (!isset($queries['master'])) {
         include './Components/home.php';
+        include 'emp_data.php';
     } else if ($queries['master'] == "usertype") {
         include './Components/usertype.php';
+        include 'usertype_table.php';
     } else if ($queries['master'] == "staff") {
         include './Components/staff.php';
     } else if ($queries['master'] == "state") {
@@ -40,8 +42,9 @@
         include './Components/single_custreport.php';
     } else {
         include './Components/home.php';
+        include 'emp_data.php';
     }
-    include 'emp_data.php';
+    
     ?>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

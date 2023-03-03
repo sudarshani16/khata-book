@@ -6,8 +6,8 @@
         <div class="panel-body">
             <form action="saveproject.php" method="POST" role="form">
                 <div class="form-group">
-                    <label for="">Bill No</label>
-                    <input type="text" class="form-control" id="" name="txtid" placeholder="Input field">
+                    <label for="">Bill No</label> <input type="text" class="form-control" id="" name="txtid"
+                        placeholder="Input field">
                 </div>
                 <div class="form-group">
                     <label for="">Reciept</label>
