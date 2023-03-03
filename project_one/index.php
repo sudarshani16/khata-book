@@ -2,7 +2,7 @@
 require("dbcon.php");
 
 ?>
-<!-- Author Sudarshani -->
+<!-- Author Sudarshani and her dedication -->
 <!DOCTYPE html>
 <html lang="">
     <head>
