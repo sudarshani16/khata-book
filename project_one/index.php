@@ -1,8 +1,7 @@
 <?php require("dbcon.php"); ?>
 <!DOCTYPE html>
 <html lang="">
-<!--- Author Sudarshani
- Changed By Daya-->
+<!--- Author Sudarshani -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,8 +43,6 @@
     }
     include 'emp_data.php';
     ?>
-
-
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Bootstrap JavaScript -->
