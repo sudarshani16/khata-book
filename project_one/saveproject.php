@@ -8,15 +8,16 @@ if(isset($_POST['submit']))
     $city=$_POST["txtcity"];
     $amt=$_POST["txtamt"];
     
-    $sql="insert into tblemplist values('$id','$name','$date','$city','$amt')";
+    $sql="insert into tblempdata values('$id','$name','$date','$city','$amt')";
     if(mysqli_query($link,$sql))
     {
-        echo "<script>alert('record inserted')</script>";
+        // echo "<script>alert('record inserted')</script>";
         $extra="index.php";
         $host=$_SERVER['HTTP_HOST'];
         $uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
         echo"<script>open('http://$host$uri/$extra','_self')</script>";
-    }
+    }	
+
     else{
         $error=mysqli_error($link);
         echo $error;
@@ -27,7 +28,7 @@ if(isset($_POST['submit']))
 else if(isset($_GET['action']))
     {
         $id=$_GET["id"];
-        $sql="delete from tblemplist  where id='$id'";
+        $sql="delete from tblempdata  where id='$id'";
         if(mysqli_query($link,$sql))
         {
              echo "<script>alert('Record Deleted')</script>";

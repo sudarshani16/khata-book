@@ -6,7 +6,7 @@
         <table class="table table-bordered table-hover">
             <thead>
                 <tr>
-                    <th>Tr.No</th>
+                    <th>ID</th>
                     <th>Customer Name</th>
                     <th>Date</th>
                     <th>City</th>
@@ -16,7 +16,7 @@
             </thead>
             <tbody>
                 <?php
-                    $sql="select *from tblemplist";
+                    $sql="select *from tblempdata";
                     $res=mysqli_query($link,$sql);
                     while($r=mysqli_fetch_array($res)){           
                 ?>

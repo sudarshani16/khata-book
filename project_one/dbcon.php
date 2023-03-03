@@ -2,7 +2,7 @@
 $host="localhost";
 $user="root";
 $pass="";
-$dbname="tbllist";
+$dbname="kbook";
 $link=mysqli_connect($host,$user,$pass,$dbname);
 ?>
 
