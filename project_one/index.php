@@ -22,7 +22,7 @@
         include 'emp_data.php';
     } else if ($queries['master'] == "usertype") {
         include './Components/usertype.php';
-        include './All_Table/usertype_table.php';
+        include 'emp_data.php';
     } else if ($queries['master'] == "staff") {
         include './Components/staff.php';
     } else if ($queries['master'] == "state") {

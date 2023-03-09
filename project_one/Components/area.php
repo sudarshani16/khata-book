@@ -13,6 +13,7 @@
                     <label for="">Area</label>
                     <input type="state" class="form-control" id="" name="txtid" placeholder="Input field">
                 </div>
+                <input type="hidden" name="page" value="area">
                 <button type="submit" class="btn btn-primary" name="submit">Save</button>
             </form>
         </div>

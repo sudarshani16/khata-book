@@ -18,6 +18,7 @@
                     <label for="">Paid amount</label>
                     <input type="text" class="form-control" id="" name="txtname" placeholder="Input field">
                 </div>
+                <input type="hidden" name="page" value="customer_type">
                 <button type="submit" class="btn btn-primary" name="submit">Save</button>
             </form>
 

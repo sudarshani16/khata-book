@@ -1,3 +1,10 @@
+
+<?php include 'table_records.php'; ?>
+<?php 
+$sql = "select COLUMN_NAME from INFORMATION_SCHEMA.COLUMNS where TABLE_NAME='$tblname'";
+$res=mysqli_query($link,$sql);
+?>
+
 <div class="panel panel-primary">
     <div class="panel-heading">
         <h3 class="panel-title">Emp data</h3>
@@ -6,21 +13,15 @@
         <table class="table table-bordered table-hover">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Customer Name</th>
-                    <th>Address</th>
-                    <th>State</th>
-                    <th>City</th>
-                    <th>Area</th> 
-                    <th>Mobile No</th>            
-                    <th>Balance</th>            
-                    <th>Customer Type</th>            
+                <?php while($rec = mysqli_fetch_array($res)){ ?>  
+                    <th><?php echo $rec[0]; ?> </th>
+                <?php } ?>        
                     <th>Option</th>            
                 </tr>
             </thead>
             <tbody>
                 <?php
-                    $sql="select * from tblempdata";
+                    $sql="select * from $tblname";
                     $res=mysqli_query($link,$sql);
                     while($r=mysqli_fetch_array($res)){   
                         $i = 0;  

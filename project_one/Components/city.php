@@ -17,6 +17,7 @@
                     <label for="">City</label>
                     <input type="city" class="form-control" id="" name="txtid" placeholder="Input field">
                 </div>
+                <input type="hidden" name="page" value="city">
                 <button type="submit" class="btn btn-primary" name="submit">Save</button>
             </form>
         </div>

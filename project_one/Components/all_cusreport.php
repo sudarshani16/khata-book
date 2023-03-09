@@ -13,6 +13,7 @@
                     <label for="">Name</label>
                     <input type="text" class="form-control" id="" name="txtname" placeholder="Input field">
                 </div>
+                <input type="hidden" name="page" value="all_cusreport">
                 <button type="submit" class="btn btn-primary" name="submit">Save</button>
             </form>
         </div>

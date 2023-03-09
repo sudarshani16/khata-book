@@ -1,11 +1,5 @@
 <?php
 require("dbcon.php");
-// echo "Hello heman<br>";
-// echo $_SERVER['QUERY_STRING'];
-// $x =  (isset($_POST['daya'])) ? $_POST['daya'] : "Not Present";
-// echo $x;
-// if(isset($_POST['submit']))
-// {
 $id=(isset($_POST["txtid"])) ? $_POST["txtid"] : "";
 $name=(isset($_POST["txtname"])) ? $_POST["txtname"] : "";
 $address=(isset($_POST["txtadd"])) ? $_POST["txtadd"] : "";
@@ -16,14 +10,14 @@ $area=(isset($_POST["txtarea"]))? $_POST["txtarea"] : "";
 $type=(isset($_POST["txttype"])) ? $_POST["txttype"] : "";
 $state=(isset($_POST["txtstate"])) ? $_POST["txtstate"] : "";
    
-if($_POST['page'] == "user-type"){
+if($_POST['page'] == "usertype"){
     $sql = "insert into tblusertype values('$id','$type')";
 }else if($_POST['page'] == "home"){
     $sql="insert into tblempdata values('$id','$name','$address','$state','$city','$area','$mobi','$bal','$type')";
 }
 if(mysqli_query($link,$sql)){
     // echo "<script>alert('record inserted')</script>";
-    $extra="index.php";
+    $extra="index.php?master=" . $_POST['page'];
     $host=$_SERVER['HTTP_HOST'];
     $uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
     echo"<script>open('http://$host$uri/$extra','_self')</script>";

@@ -13,7 +13,7 @@
                     <label for="">User type</label>
                     <input type="text" class="form-control" id="" name="txttype" placeholder="Input field">
                 </div>
-                <input type="hidden" name="page" value="user-type">
+                <input type="hidden" name="page" value="usertype">
                 <button type="submit" class="btn btn-primary" name="submit">Save</button>
             </form>
         </div>
