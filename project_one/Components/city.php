@@ -7,6 +7,10 @@
             <form action="saveproject.php" method="POST" role="form">
                 <div class="form-group">
                     <label for="">Customer ID</label>
+                    <input type="text" class="form-control" id="" name="txtid" placeholder="Input field">
+                </div>
+                <div class="form-group">
+                    <label for="">State</label>
                     <input type="state" class="form-control" id="" name="txtid" placeholder="Input field">
                 </div>
                 <div class="form-group">

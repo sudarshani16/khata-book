@@ -10,7 +10,23 @@
                     <input type="text" class="form-control" id="" name="txtid" placeholder="Input field">
                 </div>
                 <div class="form-group">
-                    <label for="">Sell</label>
+                    <label for="">Bill No</label>
+                    <input type="text" class="form-control" id="" name="txtname" placeholder="Input field">
+                </div>
+                <div class="form-group">
+                    <label for="">Date</label>
+                    <input type="date" class="form-control" id="" name="txtname" placeholder="Input field">
+                </div>
+                <div class="form-group">
+                    <label for="">Customer Name</label>
+                    <input type="text" class="form-control" id="" name="txtname" placeholder="Input field">
+                </div>
+                <div class="form-group">
+                    <label for="">Bill Amt</label>
+                    <input type="text" class="form-control" id="" name="txtname" placeholder="Input field">
+                </div>
+                <div class="form-group">
+                    <label for="">Area</label>
                     <input type="text" class="form-control" id="" name="txtname" placeholder="Input field">
                 </div>
                 <button type="submit" class="btn btn-primary" name="submit">Save</button>

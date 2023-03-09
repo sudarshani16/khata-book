@@ -13,6 +13,7 @@
                     <label for="">State</label>
                     <input type="state" class="form-control" id="" name="txtid" placeholder="Input field">
                 </div>
+                
                 <button type="submit" class="btn btn-primary" name="submit">Save</button>
             </form>
         </div>

@@ -4,11 +4,15 @@ if(isset($_POST['submit']))
 {
     $id=$_POST["txtid"];
     $name=$_POST["txtname"];
-    $date=$_POST["txtdate"];
+    $address=$_POST["txtadd"];
     $city=$_POST["txtcity"];
-    $amt=$_POST["txtamt"];
+    $bal=$_POST["txtbal"];
+    $mobi=$_POST["txtmobi"];
+    $area=$_POST["txtarea"];
+    $type=$_POST["txttype"];
+    $state=$_POST["txtstate"];
     
-    $sql="insert into tblempdata values('$id','$name','$date','$city','$amt')";
+    $sql="insert into tblempdata values('$id','$name','$address','$state','$city','$area','$mobi','$bal','$type')";
     if(mysqli_query($link,$sql))
     {
         // echo "<script>alert('record inserted')</script>";
