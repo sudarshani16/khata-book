@@ -26,25 +26,4 @@ if(mysqli_query($link,$sql)){
     echo $error;
 }
 mysqli_close($link);
-// }
-// else if(isset($_GET['action']))
-//     {
-//         $id=$_GET["id"];
-//         $sql="delete from tblempdata  where id='$id'";
-//         if(mysqli_query($link,$sql))
-//         {
-//              echo "<script>alert('Record Deleted')</script>";
-//              $extra="index.php";
-//              $host=$_SERVER['HTTP_HOST'];
-//              $uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
-//              echo "<script>open('http://$host$uri/$extra','_self')</script>"; 
-//         }
-//         else
-//         {
-//              $error = mysqli_error($link);
-//              echo $error;
-
-//         }
-        
-//     }
 ?>
