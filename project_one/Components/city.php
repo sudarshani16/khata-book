@@ -11,11 +11,11 @@
                 </div>
                 <div class="form-group">
                     <label for="">State</label>
-                    <input type="state" class="form-control" id="" name="txtid" placeholder="Input field">
+                    <input type="state" class="form-control" id="" name="txtstate" placeholder="Input field">
                 </div>
                 <div class="form-group">
                     <label for="">City</label>
-                    <input type="city" class="form-control" id="" name="txtid" placeholder="Input field">
+                    <input type="city" class="form-control" id="" name="txtcity" placeholder="Input field">
                 </div>
                 <button type="submit" class="btn btn-primary" name="submit">Save</button>
             </form>

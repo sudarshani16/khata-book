@@ -3,14 +3,15 @@ require("dbcon.php");
 if(isset($_POST['submit']))
 {
     $id=$_POST["txtid"];
-    $name=$_POST["txtuser"];
+    $state=$_POST["txtstate"];
+    $city=$_POST["txtcity"];
    
     
-    $sql="insert into tblusertype values('$id','$name')";
+    $sql="insert into tblcity_data values('$id','$state','$city')";
     if(mysqli_query($link,$sql))
     {
         // echo "<script>alert('record inserted')</script>";
-        $extra="usertype.php";
+        $extra="city.php";
         $host=$_SERVER['HTTP_HOST'];
         $uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
         echo"<script>open('http://$host$uri/$extra','_self')</script>";
@@ -26,11 +27,11 @@ if(isset($_POST['submit']))
 else if(isset($_GET['action']))
     {
         $id=$_GET["id"];
-        $sql="delete from tblusertype  where id='$id'";
+        $sql="delete from tblcity_data  where id='$id'";
         if(mysqli_query($link,$sql))
         {
              echo "<script>alert('Record Deleted')</script>";
-             $extra="usertype.php";
+             $extra="city.php";
              $host=$_SERVER['HTTP_HOST'];
              $uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
              echo "<script>open('http://$host$uri/$extra','_self')</script>"; 
