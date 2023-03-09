@@ -4,7 +4,7 @@
             <h3 class="panel-title">K Book</h3>
         </div>
         <div class="panel-body">
-            <form action="saveproject.php" method="POST" role="form">
+            <form action="saveproject.php?page=home" method="POST" role="form">
                 <div class="form-group">
                     <label for="">Customer ID</label>
                     <input type="text" class="form-control" id="" name="txtid" placeholder="Input field" value=<?php echo curr_val(); ?> readonly>
@@ -44,6 +44,8 @@
                     <label for="">Customer Type</label>
                     <input type="text" class="form-control" id="" name="txttype" placeholder="Input field">
                 </div>
+                <!-- hidden input -->
+                <input type="hidden" name = "page" value="home">
                 <button type="submit" class="btn btn-primary" name="submit">Save</button>
                 <button type="reset" class="btn btn-primary" name="reset">Reset</button>
             </form>
