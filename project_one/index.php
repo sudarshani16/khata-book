@@ -27,7 +27,11 @@
         include './Components/staff.php';
     } else if ($queries['master'] == "state") {
         include './Components/state.php';
-    } else if ($queries['master'] == "customer_type") {
+    } else if ($queries['master'] == "city") {
+        include './Components/city.php';
+    }else if ($queries['master'] == "area") {
+        include './Components/area.php';
+    }else if ($queries['master'] == "customer_type") {
         include './Components/customer_type.php';
     } else if ($queries['master'] == "customer") {
         include './Components/customer.php';
