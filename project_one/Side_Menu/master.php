@@ -4,6 +4,7 @@
             <li class="list-group-item"><a href="index.php">HOME</a></li>
             <li class="list-group-item"><a href="index.php?master=usertype">User Type</a></li>
             <li class="list-group-item"><a href="index.php?master=state">State</a></li>
-            <li class="list-group-item"><a href="index.php?master=customer_type">Customer Type</a></li>
+            <li class="list-group-item"><a href="index.php?master=customer_type">City</a></li>
+            <li class="list-group-item"><a href="index.php?master=customer_type">Area</a></li>
       </div>
 </ul>
