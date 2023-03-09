@@ -13,14 +13,6 @@
                     <label for="">State</label>
                     <input type="state" class="form-control" id="" name="txtid" placeholder="Input field">
                 </div>
-                <div class="form-group">
-                    <label for="">City</label>
-                    <input type="city" class="form-control" id="" name="txtname" placeholder="Input field">
-                </div>
-                <div class="form-group">
-                    <label for="">Area</label>
-                    <input type="text" class="form-control" id="" name="txtname" placeholder="Input field">
-                </div>
                 <button type="submit" class="btn btn-primary" name="submit">Save</button>
             </form>
         </div>
