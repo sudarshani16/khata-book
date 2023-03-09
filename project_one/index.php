@@ -27,10 +27,13 @@
         include './Components/staff.php';
     } else if ($queries['master'] == "state") {
         include './Components/state.php';
+        include './All_Table/state_table.php';
     } else if ($queries['master'] == "city") {
         include './Components/city.php';
+        include './All_Table/city_table.php';
     }else if ($queries['master'] == "area") {
         include './Components/area.php';
+        include './All_Table/area_table.php';
     }else if ($queries['master'] == "customer_type") {
         include './Components/customer_type.php';
     } else if ($queries['master'] == "customer") {
