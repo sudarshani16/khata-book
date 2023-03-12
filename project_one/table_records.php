@@ -6,31 +6,29 @@
         $tblname = "tblempdata";
     } else if ($queries['master'] == "usertype") {
         $tblname =  "tblusertype";
-    } 
-    // else if ($queries['master'] == "staff") {
+    }else if ($queries['master'] == "staff") {
         
-    // } else if ($queries['master'] == "state") {
+    } else if ($queries['master'] == "state") {
+        $tblname = "tblempdata";
+    } else if ($queries['master'] == "city") {
+        $tblname = "tblempdata";
+    }else if ($queries['master'] == "area") {
         
-    // } else if ($queries['master'] == "city") {
+    }else if ($queries['master'] == "customer_type") {
         
-    // }else if ($queries['master'] == "area") {
+    } else if ($queries['master'] == "customer") {
         
-    // }else if ($queries['master'] == "customer_type") {
+    } else if ($queries['master'] == "supplier") {
         
-    // } else if ($queries['master'] == "customer") {
+    } else if ($queries['master'] == "sell") {
         
-    // } else if ($queries['master'] == "supplier") {
+    } else if ($queries['master'] == "reciept") {
         
-    // } else if ($queries['master'] == "sell") {
+    } else if ($queries['master'] == "allreport") {
         
-    // } else if ($queries['master'] == "reciept") {
+    } else if ($queries['master'] == "singlereport") {
         
-    // } else if ($queries['master'] == "allreport") {
-        
-    // } else if ($queries['master'] == "singlereport") {
-        
-    // } 
-    else {
+    }else {
         $tblname = "tblempdata";
     }
 ?>

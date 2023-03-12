@@ -6,7 +6,7 @@
         <div class="panel-body">
             <form action="saveproject.php" method="POST" role="form">
                 <div class="form-group">
-                    <label for="">Customer ID</label>
+                    <label for="">Customer Name</label>
                     <input type="text" class="form-control" id="" name="txtid" placeholder="Input field">
                 </div>
                 <div class="form-group">

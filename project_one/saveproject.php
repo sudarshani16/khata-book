@@ -5,6 +5,8 @@ if($_POST['page'] == "usertype"){
     $sql = "insert into tblusertype values('$id','$type')";
 }else if($_POST['page'] == "home"){
     $sql="insert into tblempdata values('$id','$name','$address','$state','$city','$area','$mobi','$bal','$type')";
+}else if(($_POST['page'] == "state"){
+    $sql = "insert into"
 }
 if(mysqli_query($link,$sql)){
     // echo "<script>alert('record inserted')</script>";

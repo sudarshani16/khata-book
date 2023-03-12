@@ -1,48 +1,52 @@
+
+
 <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style="width=100%;">
     <div class="panel panel-primary">
         <div class="panel-heading">
             <h3 class="panel-title">K Book</h3>
         </div>
         <div class="panel-body">
-            <form action="saveproject.php?page=home" method="POST" role="form">
+            <form action="saveproject.php?page=home" method="POST" role="form" onsubmit="return recheck();">
                 <div class="form-group">
-                    <label for="">Customer ID</label>
+                    <label for="">User ID</label>
                     <input type="text" class="form-control" id="" name="txtid" placeholder="Input field" value=<?php echo curr_val(); ?> readonly>
                 </div>
                 <div class="form-group">
-                    <label for="">Customer Name</label>
-                    <input type="text" class="form-control" id="" name="txtname" placeholder="Input field">
+                    <label for="">User Name</label>
+                    <input type="text" class="form-control" id="" name="txtname" placeholder="Input field" required>
                 </div>
 
                 <div class="form-group">
                     <label for="">Address</label>
-                    <input type="text" class="form-control" id="" name="txtadd" placeholder="Input field">
+                    <input type="text" class="form-control" id="" name="txtadd" placeholder="Input field" required>
                 </div>
 
                 <div class="form-group">
                     <label for="">Mobile Number</label>
-                    <input type="number" class="form-control" id="" name="txtmobi" placeholder="Input field">
+                    <input type="number" class="form-control" id="" name="txtmobi" placeholder="Input field" required>
                 </div>
                 <div class="form-group">
-                    <label for="">State</label>
-                    <input type="state" class="form-control" id="" name="txtstate" placeholder="Input field">
+                    <label for="state">State</label>
+                    <input onchange="print_city('cities', this.value);" list="states" class="form-control" id="state" name="txtstate" placeholder="Input field" required>
+                    <datalist id="states"></datalist>
                 </div>
                 <div class="form-group">
-                    <label for="">City</label>
-                    <input type="city" class="form-control" id="" name="txtcity" placeholder="Input field">
+                    <label for="city">City</label>
+                    <input list="cities" class="form-control" id="city" name="txtcity" placeholder="Input field" required>
+                    <datalist id="cities"></datalist>
                 </div>
                 <div class="form-group">
                     <label for="">Area</label>
-                    <input type="text" class="form-control" id="" name="txtarea" placeholder="Input field">
+                    <input type="text" class="form-control" id="" name="txtarea" placeholder="Input field" required>
                 </div>
 
                 <div class="form-group">
                     <label for="">Balance</label>
-                    <input type="number" class="form-control" id="" name="txtbal" placeholder="Input field">
+                    <input type="number" class="form-control" id="" name="txtbal" placeholder="Input field" required>
                 </div>
                 <div class="form-group">
-                    <label for="">Customer Type</label>
-                    <input type="text" class="form-control" id="" name="txttype" placeholder="Input field">
+                    <label for="">User Type</label>
+                    <input type="text" class="form-control" id="" name="txttype" placeholder="Input field" required>
                 </div>
                 <!-- hidden input -->
                 <input type="hidden" name = "page" value="home">
@@ -62,5 +66,7 @@
             else return 1;
         }
     ?>
-
+                    
+                    
 <!-- ALTER TABLE tblempdata AUTO_INCREMENT = 1 -->
+<!-- <script src="Javascript/cities.js"></script> -->
