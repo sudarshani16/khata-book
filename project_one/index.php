@@ -13,7 +13,7 @@
     
 </head>
 
-<body id="body" class="buffering">
+<body id="body" class="">
     <!-- master -->
     <?php include 'side_menu.php';
     $queries = array();
@@ -35,6 +35,7 @@
         include 'emp_data.php';
     }else if ($queries['master'] == "area") {
         include './Components/area.php';
+        include 'emp_data.php';
     }else if ($queries['master'] == "customer_type") {
         include './Components/customer_type.php';
     } else if ($queries['master'] == "customer") {
@@ -59,7 +60,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Bootstrap JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="module" src="Javascript/city.js"></script>
+    <script type="module" src="Javascript/home.js"></script>
+    <script src="Javascript/main.js"></script>
     <!-- <script type="module"></script> -->
     <script> 
             var body = document.getElementById("body");
@@ -71,23 +73,6 @@
             }
             //state code end
             }
-
-            // // City Js -----------
-
-            // let city_ = document.getElementById("city_");
-            // city_.addEventListener("change", (event) => {
-            // // let val = event.target.value;
-            // // console.log("Hello");
-            // const formData = new FormData(document.getElementById("city_form"));
-            // var xhr = new XMLHttpRequest();
-            // xhr.open('POST', './server.php', true);
-            // xhr.onload = () => {
-            //     if (xhr.status === 200) {
-            //         alert(xhr.responseText);
-            //     }
-            // };
-            // xhr.send(formData);
-            // });
         </script>
 </body>
 

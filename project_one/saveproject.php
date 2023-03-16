@@ -21,6 +21,22 @@ if($_POST['page'] == "usertype"){
     }else{
         $sql = "insert into state values('$NewId','$newName','$state')";
     }
+}else if($_POST['page'] == "city"){
+    $i=0;
+    $NewId = 0;
+    while($name[$i] != '.'){
+        $NewId =  10 * $NewId + ($name[$i]-'0');
+        $i++;
+    }
+    $newName = substr($name,$i+2,strlen($name));
+    $sql="select * from city where `User Id` = '$NewId' and State ='$state' and City = '$city'";
+    $res=mysqli_query($link,$sql); 
+    if($res ->num_rows == 1){
+        header('Location: http://localhost/my/khata-book/project_one/index.php?master=state&pres=1');
+        exit();
+    }else{
+        $sql = "insert into city values('$NewId','$newName','$state','$city')";
+    }
 }else{
     $sql = "";
 }

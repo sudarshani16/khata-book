@@ -6,7 +6,7 @@
             <h3 class="panel-title">K Book</h3>
         </div>
         <div class="panel-body">
-            <form action="saveproject.php?page=home" method="POST" role="form" id="form">
+            <form action="saveproject.php?page=home" method="POST" role="form" id="form_home">
                 <div class="form-group">
                     <label for="">User ID</label>
                     <input type="text" class="form-control" id="" name="txtid" placeholder="Input field" value=<?php echo curr_val(); ?> readonly>
@@ -27,18 +27,18 @@
                 </div>
                 <div class="form-group">
                     <label for="state">State</label>
-                    <input  list="states" class="form-control" id="state" name="txtstate" placeholder="Input field" required>
-                    <datalist id="states"></datalist>
+                    <input  list="states_home" class="form-control" id="state_home" name="txtstate" placeholder="Input field" required>
+                    <datalist id="states_home"></datalist>
                 </div>
                 <div class="form-group">
                     <label for="city">City</label>
-                    <input list="cities" class="form-control" id="city" name="txtcity" placeholder="Input field" required>
-                    <datalist id="cities"></datalist>
+                    <input list="cities_home" class="form-control" id="city_home" name="txtcity" placeholder="Input field" required>
+                    <datalist id="cities_home"></datalist>
                 </div>
                 <div class="form-group">
                     <label for="">Area</label>
-                    <input  list="areas" type="text" class="form-control" id="area" name="txtarea" placeholder="Input field" required>
-                    <datalist id="areas"></datalist>
+                    <input  list="areas_home" type="text" class="form-control" id="area_home" name="txtarea" placeholder="Input field" required>
+                    <datalist id="areas_home"></datalist>
                 </div>
 
                 <div class="form-group">

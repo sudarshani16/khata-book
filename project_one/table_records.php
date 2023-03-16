@@ -13,7 +13,7 @@
     } else if ($queries['master'] == "city") {
         $tblname = "city";
     }else if ($queries['master'] == "area") {
-        
+        $tblname = "area";
     }else if ($queries['master'] == "customer_type") {
         
     } else if ($queries['master'] == "customer") {
