@@ -7,7 +7,7 @@
             <form action="saveproject.php?page=city" method="POST" role="form" name="form" id="city_form">
                 <div class="form-group">
                     <label for="cityie">User Name With ID</label>
-                    <input  list="cust_name_01" class="form-control" id="cityie" name="txtid" placeholder="Input field">
+                    <input  list="cust_name_01" class="form-control" id="cityie" name="txtid" placeholder="Input field" required>
                     <datalist id="cust_name_01">
                     <?php 
                         $sql="select Id,name from tblempdata";
@@ -20,12 +20,13 @@
                 </div>
                 <div class="form-group">
                     <label for="">State</label>
-                    <input list="states_01" class="form-control" id="state" name="txtstate" placeholder="Input field">
+                    <input list="states_01" class="form-control" id="state" name="txtstate" placeholder="Input field" required>
                     <datalist id="states_01"></datalist>
                 </div>
                 <div class="form-group">
                     <label for="">City</label>
-                    <input type="city" class="form-control" id="" name="txtcity" placeholder="Input field">
+                    <input list="cities" class="form-control" id="city" name="txtcity" placeholder="Input field" required> 
+                    <datalist id="cities"></datalist>
                 </div>
                 <input type="hidden" name="page" value="city">
                 <button type="submit" class="btn btn-primary" name="submit">Save</button>

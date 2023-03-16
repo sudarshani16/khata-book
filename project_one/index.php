@@ -13,7 +13,7 @@
     
 </head>
 
-<body id="body">
+<body id="body" class="buffering">
     <!-- master -->
     <?php include 'side_menu.php';
     $queries = array();
