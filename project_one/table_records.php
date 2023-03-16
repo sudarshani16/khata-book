@@ -9,9 +9,9 @@
     }else if ($queries['master'] == "staff") {
         
     } else if ($queries['master'] == "state") {
-        $tblname = "tblempdata";
+        $tblname = "state";
     } else if ($queries['master'] == "city") {
-        $tblname = "tblempdata";
+        $tblname = "city";
     }else if ($queries['master'] == "area") {
         
     }else if ($queries['master'] == "customer_type") {

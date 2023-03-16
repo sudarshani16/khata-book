@@ -4,14 +4,24 @@
             <h3 class="panel-title">City</h3>
         </div>
         <div class="panel-body">
-            <form action="saveproject.php" method="POST" role="form">
+            <form action="saveproject.php?page=city" method="POST" role="form" name="form" id="city_form">
                 <div class="form-group">
-                    <label for="">Customer Name</label>
-                    <input type="text" class="form-control" id="" name="txtid" placeholder="Input field">
+                    <label for="cityie">User Name With ID</label>
+                    <input  list="cust_name_01" class="form-control" id="cityie" name="txtid" placeholder="Input field">
+                    <datalist id="cust_name_01">
+                    <?php 
+                        $sql="select Id,name from tblempdata";
+                        $res=mysqli_query($link,$sql);
+                        while($r=mysqli_fetch_array($res)){ 
+                    ?>  
+                    <option value="<?php echo $r[0] .". " . $r[1]; ?>"></option>
+                        <?php } ?>
+                    </datalist>
                 </div>
                 <div class="form-group">
                     <label for="">State</label>
-                    <input type="state" class="form-control" id="" name="txtstate" placeholder="Input field">
+                    <input list="states_01" class="form-control" id="state" name="txtstate" placeholder="Input field">
+                    <datalist id="states_01"></datalist>
                 </div>
                 <div class="form-group">
                     <label for="">City</label>
@@ -21,3 +31,4 @@
                 <button type="submit" class="btn btn-primary" name="submit">Save</button>
             </form>
         </div>
+        

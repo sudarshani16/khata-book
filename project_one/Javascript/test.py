@@ -2,8 +2,8 @@ import openai
 import time
 # import json
 openai.api_key = "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"
-indian_states = ["Punjab",  "Rajasthan",    "Sikkim",    "Tamil Nadu",    "Telangana",    "Tripura",    "Uttar Pradesh",    "Uttarakhand",    "West Bengal",    "Andaman and Nicobar Islands",    "Chandigarh",    "Dadra and Nagar Haveli and Daman and Diu",    "Lakshadweep",    "Delhi",    "Puducherry"]
-# indian_states = ["maharashtra","Assam"];
+# indian_states = ["Punjab",  "Rajasthan",    "Sikkim",    "Tamil Nadu",    "Telangana",    "Tripura",    "Uttar Pradesh",    "Uttarakhand",    "West Bengal",    "Andaman and Nicobar Islands",    "Chandigarh",    "Dadra and Nagar Haveli and Daman and Diu",    "Lakshadweep",    "Delhi",    "Puducherry"]
+indian_states = ["Puducherry"];
 # "Andhra Pradesh",    "Arunachal Pradesh",    "Assam",    "Bihar",    "Chhattisgarh",    "Goa",   "Gujarat",    "Haryana",    "Himachal Pradesh",    "Jharkhand",    "Karnataka",    "Kerala",    "Madhya Pradesh",    "Maharashtra",    "Manipur",    "Meghalaya",    "Mizoram",    "Nagaland",    "Odisha",   
 for i in range(len(indian_states)):
     str = "{ state : \"" + indian_states[i] + "\", cities : [";

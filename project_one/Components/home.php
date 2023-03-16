@@ -6,7 +6,7 @@
             <h3 class="panel-title">K Book</h3>
         </div>
         <div class="panel-body">
-            <form action="saveproject.php?page=home" method="POST" role="form" onsubmit="return recheck();">
+            <form action="saveproject.php?page=home" method="POST" role="form" id="form">
                 <div class="form-group">
                     <label for="">User ID</label>
                     <input type="text" class="form-control" id="" name="txtid" placeholder="Input field" value=<?php echo curr_val(); ?> readonly>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="form-group">
                     <label for="state">State</label>
-                    <input onchange="print_city('cities', this.value);" list="states" class="form-control" id="state" name="txtstate" placeholder="Input field" required>
+                    <input  list="states" class="form-control" id="state" name="txtstate" placeholder="Input field" required>
                     <datalist id="states"></datalist>
                 </div>
                 <div class="form-group">
@@ -37,7 +37,8 @@
                 </div>
                 <div class="form-group">
                     <label for="">Area</label>
-                    <input type="text" class="form-control" id="" name="txtarea" placeholder="Input field" required>
+                    <input  list="areas" type="text" class="form-control" id="area" name="txtarea" placeholder="Input field" required>
+                    <datalist id="areas"></datalist>
                 </div>
 
                 <div class="form-group">
@@ -45,8 +46,15 @@
                     <input type="number" class="form-control" id="" name="txtbal" placeholder="Input field" required>
                 </div>
                 <div class="form-group">
-                    <label for="">User Type</label>
-                    <input type="text" class="form-control" id="" name="txttype" placeholder="Input field" required>
+                    <label for="user_type">User Type</label>
+                    <!-- <input type="text" class="form-control" id="" name="txttype" placeholder="Input field" required> -->
+                    <select name="user_type" id="user_type" class="form-control" required>
+                        <option value="Customer">Customer</option>
+                        <option value="Owner">Owner</option>
+                        <option value="Admin">Admin</option>
+                        <option value="Supplier">Supplier</option>
+                        <option selected value="Guest">Guest</option>
+                    </select>
                 </div>
                 <!-- hidden input -->
                 <input type="hidden" name = "page" value="home">
