@@ -8,7 +8,11 @@
         $NewId =  10 * $NewId + ($name[$i]-'0');
         $i++;
     }
-    $sql = "select state from state where `user id` = '$NewId'";
+    if($_POST['page'] == "city"){
+        $sql = "select state from state where `user id` = '$NewId'";
+    }else if($_POST['page'] == "area"){
+        $sql = "select City from city where `User Id` = '$NewId'";
+    }
     $res=mysqli_query($link,$sql);
     while($r=mysqli_fetch_array($res)){
         echo "," . $r[0] . "";

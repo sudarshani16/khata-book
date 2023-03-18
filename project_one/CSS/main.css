@@ -2,6 +2,10 @@
     width: -webkit-fill-available;
 }
 
+.center_text {
+    text-align: center !important;
+}
+
 
 /* Buffring Class ---  */
 

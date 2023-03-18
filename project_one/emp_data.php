@@ -26,7 +26,7 @@ $res=mysqli_query($link,$sql);
                     while($r=mysqli_fetch_array($res)){   
                         $i = 0;  
                 ?>
-                    <tr>   
+                    <tr class="test">   
                         <?php while($i < (sizeof($r)/2)){  ?>
                         <td><?php echo $r[$i];?></td> 
                         <?php $i++; } ?>

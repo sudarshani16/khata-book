@@ -6,49 +6,48 @@
             <h3 class="panel-title">K Book</h3>
         </div>
         <div class="panel-body">
-            <form action="saveproject.php?page=home" method="POST" role="form" id="form_home">
+            <form action="saveproject.php?page=home" method="POST" role="form" id="form">
                 <div class="form-group">
-                    <label for="">User ID</label>
-                    <input type="text" class="form-control" id="" name="txtid" placeholder="Input field" value=<?php echo curr_val(); ?> readonly>
+                    <label for="user_id">User ID</label>
+                    <input type="text" class="form-control" id="user_id" name="txtid" placeholder="Input field" value=<?php echo curr_val(); ?> readonly>
                 </div>
                 <div class="form-group">
-                    <label for="">User Name</label>
-                    <input type="text" class="form-control" id="" name="txtname" placeholder="Input field" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="">Address</label>
-                    <input type="text" class="form-control" id="" name="txtadd" placeholder="Input field" required>
+                    <label for="user_name">User Name</label>
+                    <input type="text" class="form-control" id="user_name" name="txtname" placeholder="Input field" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="">Mobile Number</label>
-                    <input type="number" class="form-control" id="" name="txtmobi" placeholder="Input field" required>
+                    <label for="user_address">Address</label>
+                    <input type="text" class="form-control" id="user_address" name="txtadd" placeholder="Input field" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="user_mobi">Mobile Number</label>
+                    <input type="number" class="form-control" id="user_mobi" name="txtmobi" placeholder="Input field" required>
                 </div>
                 <div class="form-group">
                     <label for="state">State</label>
-                    <input  list="states_home" class="form-control" id="state_home" name="txtstate" placeholder="Input field" required>
-                    <datalist id="states_home"></datalist>
+                    <input  list="state_list" class="form-control" id="state" name="txtstate" placeholder="Input field" required>
+                    <datalist id="state_list"></datalist>
                 </div>
                 <div class="form-group">
                     <label for="city">City</label>
-                    <input list="cities_home" class="form-control" id="city_home" name="txtcity" placeholder="Input field" required>
-                    <datalist id="cities_home"></datalist>
+                    <input list="city_list" class="form-control" id="city" name="txtcity" placeholder="Input field" required>
+                    <datalist id="city_list"></datalist>
                 </div>
                 <div class="form-group">
-                    <label for="">Area</label>
-                    <input  list="areas_home" type="text" class="form-control" id="area_home" name="txtarea" placeholder="Input field" required>
-                    <datalist id="areas_home"></datalist>
+                    <label for="area">Area</label>
+                    <input  list="area_list" type="text" class="form-control" id="area" name="txtarea" placeholder="Input field" required>
+                    <datalist id="area_list"></datalist>
                 </div>
 
                 <div class="form-group">
-                    <label for="">Balance</label>
-                    <input type="number" class="form-control" id="" name="txtbal" placeholder="Input field" required>
+                    <label for="user_balance">Balance</label>
+                    <input type="number" class="form-control" id="user_balance" name="txtbal" placeholder="Input field" required>
                 </div>
                 <div class="form-group">
                     <label for="user_type">User Type</label>
-                    <!-- <input type="text" class="form-control" id="" name="txttype" placeholder="Input field" required> -->
-                    <select name="user_type" id="user_type" class="form-control" required>
+                    <select name="txttype" id="user_type" class="form-control" required>
                         <option value="Customer">Customer</option>
                         <option value="Owner">Owner</option>
                         <option value="Admin">Admin</option>

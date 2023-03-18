@@ -37,6 +37,22 @@ if($_POST['page'] == "usertype"){
     }else{
         $sql = "insert into city values('$NewId','$newName','$state','$city')";
     }
+}else if($_POST['page'] == "area"){
+    $i=0;
+    $NewId = 0;
+    while($name[$i] != '.'){
+        $NewId =  10 * $NewId + ($name[$i]-'0');
+        $i++;
+    }
+    $newName = substr($name,$i+2,strlen($name));
+    $sql="select * from area where `User Id` = '$NewId' and State ='$state' and City = '$city' and Area = '$area'";
+    $res=mysqli_query($link,$sql); 
+    if($res ->num_rows == 1){
+        header('Location: http://localhost/my/khata-book/project_one/index.php?master=area&pres=1');
+        exit();
+    }else{
+        $sql = "insert into area values('$NewId','$newName','$state','$city','$area')";
+    }
 }else{
     $sql = "";
 }

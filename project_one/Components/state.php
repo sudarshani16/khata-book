@@ -6,9 +6,9 @@
         <div class="panel-body">
             <form action="saveproject.php?page=state" method="POST" role="form" onsubmit="return check();" id="form">
                 <div class="form-group">
-                    <label for="cust_01">User Name With ID</label>
-                    <input onchange = "filler(this.value);" list="user_name_01" class="form-control" id="user_name_state" name="txtname" placeholder="Input field" required>
-                    <datalist id="user_name_01">
+                    <label for="user_name">User Name With ID</label>
+                    <input list="user_name_list" class="form-control" id="user_name" name="txtname" placeholder="Input field" required>
+                    <datalist id="user_name_list">
                     <?php 
                         $sql="select Id,name from tblempdata";
                         $res=mysqli_query($link,$sql);
@@ -20,11 +20,10 @@
                 </div>
                 <div class="form-group">
                     <label for="">State</label>
-                    <input onchange="chkState(this.value);" list="states_state" class="form-control" id="state_state" name="txtstate" placeholder="Input field" required>
-                    <datalist id="states_state"></datalist>
+                    <input list="state_list" class="form-control" id="state" name="txtstate" placeholder="Input field" required>
+                    <datalist id="state_list"></datalist>
                 </div>
                 <input type="hidden" name="page" value="state">
-                <input type="hidden" id="user_name">
                 <button type="submit" class="btn btn-primary" name="submit">Save</button>
             </form>
         </div>

@@ -6,9 +6,9 @@
         <div class="panel-body">
             <form action="saveproject.php?page=city" method="POST" role="form" name="form" id="form">
                 <div class="form-group">
-                    <label for="user_01">User Name With ID</label>
-                    <input  list="user_name_01" class="form-control" id="user_name" name="txtname" placeholder="Input field" required>
-                    <datalist id="user_name_01">
+                    <label for="user_name">User Name With ID</label>
+                    <input  list="user_name_list" class="form-control" id="user_name" name="txtname" placeholder="Input field" required>
+                    <datalist id="user_name_list">
                     <?php 
                         $sql="select Id,name from tblempdata";
                         $res=mysqli_query($link,$sql);
@@ -19,17 +19,16 @@
                     </datalist>
                 </div>
                 <div class="form-group">
-                    <label for="">State</label>
-                    <input list="states" class="form-control" id="state" name="txtstate" placeholder="Input field" required>
-                    <datalist id="states"></datalist>
+                    <label for="state">State</label>
+                    <input list="state_list" class="form-control" id="state" name="txtstate" placeholder="Input field" required>
+                    <datalist id="state_list"></datalist>
                 </div>
                 <div class="form-group">
-                    <label for="">City</label>
-                    <input list="cities" class="form-control" id="city" name="txtcity" placeholder="Input field" required> 
-                    <datalist id="cities"></datalist>
+                    <label for="city">City</label>
+                    <input list="city_list" class="form-control" id="city" name="txtcity" placeholder="Input field" required> 
+                    <datalist id="city_list"></datalist>
                 </div>
                 <input type="hidden" name="page" value="city">
-                <input type="hidden" id="user_name_state">
                 <button type="submit" class="btn btn-primary" name="submit">Save</button>
             </form>
         </div>
