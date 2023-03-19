@@ -1,4 +1,3 @@
-
 <?php include 'table_records.php'; ?>
 <?php 
 $sql = "select COLUMN_NAME from INFORMATION_SCHEMA.COLUMNS where TABLE_NAME='$tblname'";

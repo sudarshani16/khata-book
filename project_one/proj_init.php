@@ -31,7 +31,7 @@ if (mysqli_num_rows($result) > 0) {
     mysqli_query($link, $sql);
     $sql = "CREATE TABLE `area` ( `User Id` int(11) NOT NULL, `User Name` varchar(50) NOT NULL, `State` varchar(50) NOT NULL, `City` varchar(50) NOT NULL, `Area` varchar(50) NOT NULL, KEY `fk_area` (`User Id`), CONSTRAINT `fk_area` FOREIGN KEY (`User Id`) REFERENCES `tblempdata` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4";
     mysqli_query($link, $sql);
+    
 }
-
 // Close connection
 ?>
