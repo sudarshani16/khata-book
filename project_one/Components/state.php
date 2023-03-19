@@ -24,6 +24,7 @@
                     <datalist id="state_list"></datalist>
                 </div>
                 <input type="hidden" name="page" value="state">
+                <input type="hidden" name="txtid" value="0" id="user_id">
                 <button type="submit" class="btn btn-primary" name="submit">Save</button>
             </form>
         </div>

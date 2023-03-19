@@ -114,3 +114,42 @@ const checkName = (name, id_name) => {
     }
     return flag == 1;
 }
+
+
+
+let uids = ["user_id", "user_name", "state", "city", "area"];
+const rows = document.querySelectorAll('.test');
+rows.forEach(row => {
+    row.addEventListener('click', (event) => {
+        const tds = row.querySelectorAll('td');
+        let i = 0;
+        tds.forEach(td => {
+            if (i == 5) {
+                return;
+            }
+            document.getElementById(uids[i]).value = td.innerText;
+            i++;
+        });
+        if (event.target.classList.contains('btn-danger')) {
+            delete_that_boi(event);
+            return;
+        }
+        if (event.target.childElementCount == 1) {
+            return;
+        }
+    });
+});
+
+const delete_that_boi = (event) => {
+    if (confirm("Are you sure you want to delete this record?") == false) return;
+    const formData = new FormData(document.getElementById("form"));
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', './delete.php', true);
+    xhr.onload = () => {
+        if (xhr.status === 200) {
+            alert("Record Deleted Successfully");
+            window.location.href = "http://localhost/my/khata-book/project_one/index.php?master=area";
+        }
+    };
+    xhr.send(formData);
+}

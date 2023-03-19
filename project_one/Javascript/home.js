@@ -172,7 +172,6 @@ const delete_that_boi = (event) => {
     console.log("Deleting in Progress " + event.target.id);
     if (confirm("Are you sure you want to delete this record?") == false) return;
     document.getElementById("user_id").value = event.target.id;
-    document.getElementById("page").value = "delete";
     const formData = new FormData(document.getElementById("form"));
     var xhr = new XMLHttpRequest();
     xhr.open('POST', './delete.php', true);
@@ -183,7 +182,6 @@ const delete_that_boi = (event) => {
         }
     };
     xhr.send(formData);
-
 }
 
 const clear = document.getElementById("clear");
