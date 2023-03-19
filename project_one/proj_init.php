@@ -22,17 +22,17 @@ if (mysqli_num_rows($result) > 0) {
 } else {
     $sql = "CREATE DATABASE $db_name";
     mysqli_query($conn, $sql);
+    $link=mysqli_connect($host,$username,$password,$db_name);
     $sql = "CREATE TABLE `tblempdata` ( `Id` int(11) NOT NULL AUTO_INCREMENT, `Name` varchar(30) NOT NULL, `Address` varchar(50) NOT NULL, `State` varchar(50) NOT NULL, `City` varchar(30) NOT NULL, `Area` varchar(50) NOT NULL, `Mobile No` varchar(50) NOT NULL, `Balance` int(11) NOT NULL, `User Type` varchar(50) NOT NULL, PRIMARY KEY (`Id`) ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4";
-    mysqli_query($conn, $sql);
+    mysqli_query($link, $sql);
     $sql = "CREATE TABLE `state` ( `User Id` int(11) NOT NULL, `User Name` varchar(50) NOT NULL, `State` varchar(50) DEFAULT NULL, KEY `fk_state` (`User Id`), CONSTRAINT `fk_state` FOREIGN KEY (`user id`) REFERENCES `tblempdata` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4";
-    mysqli_query($conn, $sql);
+    mysqli_query($link, $sql);
     $sql = "CREATE TABLE `city` ( `User Id` int(11) NOT NULL, `User Name` varchar(50) NOT NULL, `State` varchar(50) NOT NULL, `City` varchar(50) NOT NULL, KEY `fk_city` (`User Id`), CONSTRAINT `fk_city` FOREIGN KEY (`User Id`) REFERENCES `tblempdata` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4";
-    mysqli_query($conn, $sql);
+    mysqli_query($link, $sql);
     $sql = "CREATE TABLE `area` ( `User Id` int(11) NOT NULL, `User Name` varchar(50) NOT NULL, `State` varchar(50) NOT NULL, `City` varchar(50) NOT NULL, `Area` varchar(50) NOT NULL, KEY `fk_area` (`User Id`), CONSTRAINT `fk_area` FOREIGN KEY (`User Id`) REFERENCES `tblempdata` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4";
-    mysqli_query($conn, $sql);
-    $link=mysqli_connect($host,$user,$pass,$db_name);
+    mysqli_query($link, $sql);
+    
 }
-
 // Close connection
-mysqli_close($conn);
+
 ?>

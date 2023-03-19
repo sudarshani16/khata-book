@@ -66,7 +66,7 @@
     <?php 
         function curr_val(){
             require("proj_init.php");
-            $sql = "SELECT id from tblempdata WHERE Id = (SELECT max(Id) FROM tblempdata);";
+            $sql = "SELECT Id from tblempdata WHERE Id = (SELECT max(Id) FROM tblempdata);";
             $res = mysqli_query($link,$sql);
             if($arr = mysqli_fetch_array($res))
             return $arr[0]+1;
