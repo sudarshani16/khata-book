@@ -109,5 +109,6 @@ rows.forEach(row => {
             document.getElementById(uids[i]).value = td.innerText;
             i++;
         });
+        scrollElement.scrollTop = 0;
     });
 });
