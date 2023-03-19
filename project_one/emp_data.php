@@ -26,11 +26,11 @@ $res=mysqli_query($link,$sql);
                     while($r=mysqli_fetch_array($res)){   
                         $i = 0;  
                 ?>
-                    <tr class="test">   
+                    <tr class="test" name = "<?php echo $r[0]; ?>">   
                         <?php while($i < (sizeof($r)/2)){  ?>
                         <td><?php echo $r[$i];?></td> 
                         <?php $i++; } ?>
-                        <td> <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
+                        <td> <button id = "<?php echo $r[0]; ?>" name = "del_btn" type="button" class="btn btn-danger glyphicon glyphicon-trash"></button></td>
                     </tr>
                 <?php
                     }
@@ -43,3 +43,6 @@ $res=mysqli_query($link,$sql);
         
 </div>
 </div>
+
+
+<!-- <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> -->

@@ -1,10 +1,16 @@
 <?php
-require("dbcon.php");
+require("proj_init.php");
 include '_variables.php';
 if($_POST['page'] == "usertype"){
     $sql = "insert into tblusertype values('$id','$type')";
 }else if($_POST['page'] == "home"){
-    $sql="insert into tblempdata values('$id','$name','$address','$state','$city','$area','$mobi','$bal','$type')";
+    $sql = "select * from tblempdata where Id = '$id'";
+    $res=mysqli_query($link,$sql); 
+    if($res ->num_rows == 1){
+        $sql = "UPDATE `tblempdata` SET `Name`='$name',`Address`='$address',`State`='$state',`City`='$city',`Area`='$area',`Mobile No`='$mobi',`Balance`='$bal',`User Type`='$type' WHERE `Id`='$id';";
+    }else{
+        $sql="insert into tblempdata values('$id','$name','$address','$state','$city','$area','$mobi','$bal','$type')";
+    }
 }else if($_POST['page'] == "state"){
     $i=0;
     $NewId = 0;
@@ -13,7 +19,7 @@ if($_POST['page'] == "usertype"){
         $i++;
     }
     $newName = substr($name,$i+2,strlen($name));
-    $sql="select * from state where `user id` = $NewId and state = '$state'";
+    $sql="select * from state where `User Id` = $NewId and State = '$state'";
     $res=mysqli_query($link,$sql); 
     if($res ->num_rows == 1){
         header('Location: http://localhost/my/khata-book/project_one/index.php?master=state&pres=1');
@@ -32,7 +38,7 @@ if($_POST['page'] == "usertype"){
     $sql="select * from city where `User Id` = '$NewId' and State ='$state' and City = '$city'";
     $res=mysqli_query($link,$sql); 
     if($res ->num_rows == 1){
-        header('Location: http://localhost/my/khata-book/project_one/index.php?master=state&pres=1');
+        header('Location: http://localhost/my/khata-book/project_one/index.php?master=city&pres=1');
         exit();
     }else{
         $sql = "insert into city values('$NewId','$newName','$state','$city')";

@@ -1,5 +1,5 @@
 <?php 
-    require("dbcon.php");
+    require("proj_init.php");
     
     $name = $_POST['txtname'];
     $NewId = 0;
@@ -11,7 +11,10 @@
     if($_POST['page'] == "city"){
         $sql = "select state from state where `user id` = '$NewId'";
     }else if($_POST['page'] == "area"){
-        $sql = "select City from city where `User Id` = '$NewId'";
+        $state = $_POST['txtstate'];
+        $sql = "select City from city where `User Id` = '$NewId' and State = '$state'";
+    }else{
+        
     }
     $res=mysqli_query($link,$sql);
     while($r=mysqli_fetch_array($res)){

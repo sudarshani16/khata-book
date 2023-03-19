@@ -56,6 +56,7 @@ state.addEventListener("change", (event) => {
     xhr.onload = () => {
         if (xhr.status === 200) {
             var stateByUser = xhr.responseText.split(",");
+            console.log(stateByUser);
             for (let i = 1; i < stateByUser.length; i++) {
                 var opt = document.createElement('option');
                 opt.value = stateByUser[i];

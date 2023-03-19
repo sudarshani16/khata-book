@@ -9,7 +9,7 @@
             <form action="saveproject.php?page=home" method="POST" role="form" id="form">
                 <div class="form-group">
                     <label for="user_id">User ID</label>
-                    <input type="text" class="form-control" id="user_id" name="txtid" placeholder="Input field" value=<?php echo curr_val(); ?> readonly>
+                    <input type="text" class="form-control" id="user_id" name="txtid" placeholder="Input field" value=<?php echo curr_val(); ?> readonly >
                 </div>
                 <div class="form-group">
                     <label for="user_name">User Name</label>
@@ -56,7 +56,7 @@
                     </select>
                 </div>
                 <!-- hidden input -->
-                <input type="hidden" name = "page" value="home">
+                <input type="hidden" name="page" value="home" id="page">
                 <button type="submit" class="btn btn-primary" name="submit">Save</button>
                 <button type="reset" class="btn btn-primary" name="reset">Reset</button>
             </form>
@@ -65,7 +65,7 @@
 
     <?php 
         function curr_val(){
-            require("dbcon.php");
+            require("proj_init.php");
             $sql = "SELECT id from tblempdata WHERE Id = (SELECT max(Id) FROM tblempdata);";
             $res = mysqli_query($link,$sql);
             if($arr = mysqli_fetch_array($res))

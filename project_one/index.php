@@ -1,6 +1,6 @@
-<?php require("dbcon.php"); ?>
+<?php require("proj_init.php"); ?>
 <!DOCTYPE html>
-<html lang="">
+<html lang="" id="htm">
 <!--- Author Sudarshani -->
 <!-- Khata-Book Project -->
 <head>
@@ -22,6 +22,7 @@
     $js = "home";
     if (!isset($queries['master'])) {
         include './Components/home.php';
+        include './Components/search_bar.php';
         include 'emp_data.php'; 
     } else if ($queries['master'] == "usertype") {
         include './Components/usertype.php';
@@ -56,6 +57,7 @@
         include './Components/single_custreport.php';
     } else {
         include './Components/home.php';
+        include './Components/search_bar.php';
         include 'emp_data.php';
     }
     
