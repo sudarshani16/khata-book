@@ -1,6 +1,12 @@
 <?php
 require("proj_init.php");
 include '_variables.php';
+function redir(){
+    $extra="index.php?master=" . $_POST['page'];
+    $host=$_SERVER['HTTP_HOST'];
+    $uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
+    echo"<script>open('http://$host$uri/$extra&pres=1','_self')</script>";
+}
 if($_POST['page'] == "usertype"){
     $sql = "insert into tblusertype values('$id','$type')";
 }else if($_POST['page'] == "home"){
@@ -22,8 +28,7 @@ if($_POST['page'] == "usertype"){
     $sql="select * from state where `User Id` = $NewId and State = '$state'";
     $res=mysqli_query($link,$sql); 
     if($res ->num_rows == 1){
-        header('Location: http://localhost/my/khata-book/project_one/index.php?master=state&pres=1');
-        exit();
+        redir();
     }else{
         $sql = "insert into state values('$NewId','$newName','$state')";
     }
@@ -38,8 +43,7 @@ if($_POST['page'] == "usertype"){
     $sql="select * from city where `User Id` = '$NewId' and State ='$state' and City = '$city'";
     $res=mysqli_query($link,$sql); 
     if($res ->num_rows == 1){
-        header('Location: http://localhost/my/khata-book/project_one/index.php?master=city&pres=1');
-        exit();
+        redir();
     }else{
         $sql = "insert into city values('$NewId','$newName','$state','$city')";
     }
@@ -54,8 +58,7 @@ if($_POST['page'] == "usertype"){
     $sql="select * from area where `User Id` = '$NewId' and State ='$state' and City = '$city' and Area = '$area'";
     $res=mysqli_query($link,$sql); 
     if($res ->num_rows == 1){
-        header('Location: http://localhost/my/khata-book/project_one/index.php?master=area&pres=1');
-        exit();
+        redir();
     }else{
         $sql = "insert into area values('$NewId','$newName','$state','$city','$area')";
     }
@@ -73,5 +76,7 @@ if(mysqli_query($link,$sql)){
     $error=mysqli_error($link);
     echo $error;
 }
+
+
 mysqli_close($link);
 ?>

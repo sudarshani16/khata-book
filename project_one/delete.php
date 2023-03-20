@@ -23,8 +23,9 @@
         $res = mysqli_query($link,$sql);
         $sql = "delete from area where `User Id` = '$id' and State = '$state' and City = '$city'";
         $res = mysqli_query($link,$sql);
-    }else if($_POST['page'] == "city"){
-        $sql = "delete from city where `User Id` = '$id' and State = '$state' and City = '$city' and Area = '$area'";
+    }else if($_POST['page'] == "area"){
+        $sql = "delete from area where `User Id` = '$id' and State = '$state' and City = '$city' and Area = '$area'";
         $res = mysqli_query($link,$sql);
+        echo "Done";
     }
 ?>

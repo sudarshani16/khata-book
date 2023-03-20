@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Title Page</title>
+    <title>Khata Book</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="./CSS/main.css" rel="stylesheet">
     
@@ -67,8 +67,6 @@
     <!-- Bootstrap JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="module" src="Javascript/<?php echo $js; ?>.js"></script>
-    <!-- <script src="Javascript/main.js"></script> -->
-    <!-- <script type="module"></script> -->
     <script> 
             var body = document.getElementById("body");
             body.onload = () => {

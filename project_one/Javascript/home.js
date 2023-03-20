@@ -178,7 +178,7 @@ const delete_that_boi = (event) => {
     xhr.onload = () => {
         if (xhr.status === 200) {
             alert("Record Deleted Successfully");
-            window.location.href = "http://localhost/my/khata-book/project_one/index.php";
+            location.reload();
         }
     };
     xhr.send(formData);
