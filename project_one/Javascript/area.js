@@ -122,16 +122,25 @@ const rows = document.querySelectorAll('.test');
 rows.forEach(row => {
     row.addEventListener('click', (event) => {
         const tds = row.querySelectorAll('td');
-        let i = 0;
-        tds.forEach(td => {
-            if (i == 5) {
-                return;
-            }
-            document.getElementById(uids[i]).value = td.innerText;
-            i++;
-        });
+
         if (event.target.classList.contains('btn-danger')) {
+            let i = 0;
+            tds.forEach(td => {
+                if (i == 5) {
+                    return;
+                }
+                document.getElementById(uids[i]).value = td.innerText;
+                i++;
+            });
             delete_that_boi(event);
+            i = 0;
+            tds.forEach(td => {
+                if (i == 5) {
+                    return;
+                }
+                document.getElementById(uids[i]).value = '';
+                i++;
+            });
             return;
         }
         if (event.target.childElementCount == 1) {
